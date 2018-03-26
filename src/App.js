@@ -7,7 +7,7 @@ class App extends Component {
     return (
       <div className="App">
         Training React App
-        <Projects />
+        <Projects data="awesome-ness" />
       </div>
     );
   }
