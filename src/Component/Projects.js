@@ -5,6 +5,7 @@ class Projects extends Component {
     return (
       <div className="Projects">
         My Projects
+        {this.props.data}
       </div>
     );
   }
