@@ -6,22 +6,34 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      projects: [
-        {
-          title: 'Business Website',
-          category: 'Web Design'
-        },
-        {
-          title: 'Social App',
-          category: 'Mobile Development'
-        },
-        {
-          title: 'Ecommerce Cart',
-          category: 'Web Development'
-        }
-      ]
+      projects: []
     }
   }
+
+  /**
+   * https://daveceddia.com/where-fetch-data-componentwillmount-vs-componentdidmount/
+   */
+  componentDidMount() {
+    this.setState(
+      {
+        projects: [
+          {
+            title: 'Business Website',
+            category: 'Web Design'
+          },
+          {
+            title: 'Social App',
+            category: 'Mobile Development'
+          },
+          {
+            title: 'Ecommerce Cart',
+            category: 'Web Development'
+          }
+        ]
+      }
+    )
+  }
+
   render() {
     return (
       <div className="App">
