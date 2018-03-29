@@ -1,21 +1,33 @@
 import React, { Component } from 'react';
 import uuid from 'uuid';
+import axios from 'axios';
 import Projects from './Component/Projects';
 import AddProject from './Component/AddProject';
+import Todos from './Component/Todos';
 import './App.css';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      projects: []
+      projects: [],
+      todos: []
     }
   }
 
-  /**
-   * https://daveceddia.com/where-fetch-data-componentwillmount-vs-componentdidmount/
-   */
-  componentDidMount() {
+  getTodos() {
+    axios.get('https://jsonplaceholder.typicode.com/todos')
+      .then((response) => {
+        this.setState({todos: response.data}, () => {
+          console.log(this.state.todos);
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  }
+
+  getProjects() {
     this.setState(
       {
         projects: [
@@ -39,6 +51,14 @@ class App extends Component {
     )
   }
 
+  /**
+   * https://daveceddia.com/where-fetch-data-componentwillmount-vs-componentdidmount/
+   */
+  componentDidMount() {
+    this.getProjects();
+    this.getTodos();
+  }
+
   handleAddProject(project) {
     let projects = this.state.projects;
     projects.push(project);
@@ -58,6 +78,8 @@ class App extends Component {
       <div className="App">
         <AddProject addProject={this.handleAddProject.bind(this)} />
         <Projects data="awesome-ness" projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)} />
+        <hr/>
+        <Todos todos={this.state.todos} />
       </div>
     );
   }
