@@ -13,7 +13,7 @@ class Projects extends Component {
       projectItems = this.props.projects.map(
         project => {
           return (
-            <ProjectItem key={project.title} project={project} onDelete={this.deleteProject.bind(this)} />
+            <ProjectItem key={project.id} project={project} onDelete={this.deleteProject.bind(this)} />
           );
         }
       );
