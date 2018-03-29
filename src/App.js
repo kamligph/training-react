@@ -42,14 +42,22 @@ class App extends Component {
   handleAddProject(project) {
     let projects = this.state.projects;
     projects.push(project);
-    this.setState({ projects: projects});
+    this.setState({projects: projects});
+  }
+
+  handleDeleteProject(id) {
+    let projects = this.state.projects;
+    projects = projects.filter((item) => {
+      return item.id !== id;
+    })
+    this.setState({projects: projects});
   }
 
   render() {
     return (
       <div className="App">
         <AddProject addProject={this.handleAddProject.bind(this)} />
-        <Projects data="awesome-ness" projects={this.state.projects} />
+        <Projects data="awesome-ness" projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)} />
       </div>
     );
   }
