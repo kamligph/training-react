@@ -16,5 +16,17 @@
     "//-test": "react-scripts test --env=jsdom",
     "test": "jest",
     "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "babel-jest": "^21.2.0",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.0.0",
+    "enzyme-adapter-react-16": "^1.0.0",
+    "eslint": "^4.13.0",
+    "eslint-plugin-react": "^7.4.0",
+    "jest": "^21.2.1",
+    "react-test-renderer": "^16.0.0"
   }
 }
