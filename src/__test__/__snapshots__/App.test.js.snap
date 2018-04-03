@@ -1,0 +1,114 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Web Application Renders without crashing 1`] = `
+<div
+  className="App"
+>
+  <div>
+    <h3>
+      Add Project
+    </h3>
+    <form
+      onSubmit={[Function]}
+    >
+      <div>
+        <label>
+          Title
+        </label>
+        <br />
+        <input
+          type="text"
+        />
+      </div>
+      <div>
+        <label>
+          Category
+        </label>
+        <br />
+        <select>
+          <option
+            value="Web Design"
+          >
+            Web Design
+          </option>
+          <option
+            value="Web Development"
+          >
+            Web Development
+          </option>
+          <option
+            value="Mobile Development"
+          >
+            Mobile Development
+          </option>
+        </select>
+      </div>
+      <br />
+      <input
+        type="submit"
+        value="Submit"
+      />
+    </form>
+  </div>
+  <div
+    className="Projects"
+  >
+    <h3>
+      Latest Projects
+    </h3>
+    <li
+      className="Project"
+    >
+      <strong>
+        Business Website
+      </strong>
+      : 
+      Web Design
+       
+      <button
+        onClick={[Function]}
+      >
+        x
+      </button>
+    </li>
+    <li
+      className="Project"
+    >
+      <strong>
+        Social App
+      </strong>
+      : 
+      Mobile Development
+       
+      <button
+        onClick={[Function]}
+      >
+        x
+      </button>
+    </li>
+    <li
+      className="Project"
+    >
+      <strong>
+        Ecommerce Cart
+      </strong>
+      : 
+      Web Development
+       
+      <button
+        onClick={[Function]}
+      >
+        x
+      </button>
+    </li>
+  </div>
+  <hr />
+  <div
+    className="Projects"
+  >
+    <h3>
+      To Dos
+    </h3>
+  </div>
+</div>
+`;
