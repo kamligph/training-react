@@ -3,10 +3,6 @@ import uuid from 'uuid';
 import PropTypes from 'prop-types';
 
 class AddProject extends Component {
-  static defaultProps = {
-    categories: ['Web Design', 'Web Development', 'Mobile Development']
-  }
-
   constructor() {
     super();
     this.state = {
@@ -61,6 +57,10 @@ class AddProject extends Component {
       </div>
     );
   }
+}
+
+AddProject.defaultProps = {
+  categories: ['Web Design', 'Web Development', 'Mobile Development']
 }
 
 AddProject.propTypes = {

@@ -19,11 +19,11 @@ class App extends Component {
     axios.get('https://jsonplaceholder.typicode.com/todos')
       .then((response) => {
         this.setState({todos: response.data}, () => {
-          console.log(this.state.todos);
+          // console.log(this.state.todos);
         });
       })
       .catch(function (error) {
-        console.log(error);
+        // console.log(error);
       });
   }
 
