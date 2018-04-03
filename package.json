@@ -28,5 +28,13 @@
     "eslint-plugin-react": "^7.4.0",
     "jest": "^21.2.1",
     "react-test-renderer": "^16.0.0"
+  },
+  "jest": {
+    "rootDir": "src/__test__",
+    "testRegex": "/src/__test__/.*test\\.js$",
+    "setupFiles": [
+      "<rootDir>/polyfills.js",
+      "<rootDir>/setup.js"
+    ]
   }
 }
