@@ -19,7 +19,7 @@ class App extends Component {
     axios.get('https://jsonplaceholder.typicode.com/todos')
       .then((response) => {
         this.setState({todos: response.data}, () => {
-          // console.log(this.state.todos);
+          // console.log(this.state.todos); 
         });
       })
       .catch(function (error) {
@@ -76,7 +76,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <AddProject addProject={this.handleAddProject.bind(this)} />
+        <AddProject projectState={this.state.projects} addProject={this.handleAddProject.bind(this)} />
         <Projects data="awesome-ness" projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)} />
         <hr/>
         <Todos todos={this.state.todos} />

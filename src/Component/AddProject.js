@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import uuid from 'uuid';
 import PropTypes from 'prop-types';
 
+import { inObject } from './../Helpers';
+
 class AddProject extends Component {
   constructor() {
     super();
@@ -13,8 +15,15 @@ class AddProject extends Component {
   handleSubmit(e) {
     e.preventDefault();
 
+    let projectState = this.props.projectState;
+    let projectTitle = this.refs.title.value;
+
     if(this.refs.title.value === '') {
       alert('Title is required.');
+      return;
+    }
+    else if(inObject(projectState, 'title', projectTitle)) {
+      alert('Duplicates are not allowed.');
       return;
     }
     else {
