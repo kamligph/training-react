@@ -4,9 +4,10 @@ import TodoItem from './../Component/TodoItem';
 
 class Todos extends Component {
   render() {
+    const todoLimit = 50;
     let todoItems;
     if(this.props.todos) {
-      todoItems = this.props.todos.map(
+      todoItems = this.props.todos.slice(0, todoLimit).map(
         todo => {
           return (
             <TodoItem key={todo.id} todo={todo} />
@@ -16,7 +17,7 @@ class Todos extends Component {
     }
 
     return (
-      <div className="Projects">
+      <div className="Todos">
         <h3>To Dos</h3>
         {todoItems}
       </div>

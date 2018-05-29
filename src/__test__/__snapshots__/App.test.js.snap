@@ -104,7 +104,7 @@ exports[`Web Application Renders without crashing 1`] = `
   </div>
   <hr />
   <div
-    className="Projects"
+    className="Todos"
   >
     <h3>
       To Dos
