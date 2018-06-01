@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`[Todo.js] Renders without crashing 1`] = `
+<div
+  className="Todos"
+>
+  <h3>
+    To Dos
+  </h3>
+</div>
+`;

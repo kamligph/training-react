@@ -8,6 +8,8 @@
     "react": "^16.4.0",
     "react-dom": "^16.4.0",
     "react-scripts": "1.1.1",
+    "sinon": "^5.0.10",
+    "test-utils": "^1.1.1",
     "uuid": "^3.2.1"
   },
   "scripts": {
